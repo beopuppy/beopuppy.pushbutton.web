@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+    <p><button class="btn btn-primary btn-outline-primary" id="important_button" onclick="showmore()">Press this button</button></p>
+    <div id="newtext"></div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function showmore() {
+            $('#newtext').html(`<div class="alert alert-success"><h3>Congratulations! You have successfully pushed the button!</h3></div>`);
+        }
+
+    </script>
+}
